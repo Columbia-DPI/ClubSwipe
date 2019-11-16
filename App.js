@@ -77,7 +77,7 @@ export default class App extends React.Component {
   render() {
     let {renderLogin, renderSignup, userData} = this.state;
     if(userData) {
-      return <Main userData={userData} logout={this.logout} />
+      return <Main userData={userData} clubData={allClubMock} curatedData={recomendedClubMock} logout={this.logout} />
     }
 
     if(renderLogin) {

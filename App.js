@@ -40,7 +40,8 @@ const recomendedClubMock = [
 ];
 
 import React from 'react';
-import { StyleSheet, Text, View, Button, SafeAreaView } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView} from 'react-native';
+import Button from "react-native-button"
 import Login from "./components/Login"
 import SignUp from "./components/SignUp"
 import Main from "./components/Main"
@@ -90,10 +91,15 @@ export default class App extends React.Component {
     else {
       return (
         <SafeAreaView style={styles.container}>
-          <View>
-            <Button style={styles.buttonStyle} title="Login" onPress={() => this.setState({renderLogin:true})} />
-            <Button style={styles.buttonStyle} title="Sign Up" onPress={() => this.setState({renderSignup:true})} />
-          </View>
+            <View style={styles.logoHold}>
+            </View>
+            <View style={styles.buttonHold}>
+              <Text style={styles.caption}>
+                Find your new club today
+              </Text>
+              <Button containerStyle={styles.buttonContainer} style={styles.buttonStyle} onPress={() => this.setState({renderLogin:true})}>Login</Button>
+              <Button containerStyle={styles.buttonContainer} style={styles.buttonStyle} onPress={() => this.setState({renderSignup:true})}>Sign Up</Button>
+            </View>
         </SafeAreaView>
       );
     }
@@ -106,5 +112,28 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  logoHold: {
+    flex: 3
+  },
+  buttonHold: {
+    flex: 2,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  buttonContainer: {
+    height: 50,
+    width: 250,
+    marginTop:15,
+    backgroundColor:"#0974ed",
+    overflow:'hidden',
+    justifyContent: 'center'
+  },
+  buttonStyle: {
+    fontSize: 15,
+    color: "white",
+  },
+  caption: {
+    marginBottom:15,
   }
 });

@@ -6,9 +6,9 @@ import {
   StyleSheet,
   Text,
   ScrollView,
+  Button,
 } from 'react-native';
-import { Card, SearchBar } from 'react-native-elements';
-
+import { Card, SearchBar, Header } from 'react-native-elements';
 const DATA = [
   {
     website: 'www.FirstClub.org',
@@ -48,13 +48,12 @@ const DATA = [
   },
 ];
 
-
 export default class AllClubs extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      search: "Search For Clubs",
+      search: 'Search For Clubs',
       websites: [],
       descriptions: [],
       clubName: [],
@@ -82,11 +81,22 @@ export default class AllClubs extends React.Component {
   render() {
     return (
       <ScrollView>
+        <Header
+          leftComponent= 
+          {<Button
+            style={styles.buttonStyle}
+            onPress={this.props.dismiss}
+            title="Back "
+          />}
+          centerComponent={{ text: 'ALL CLUBS', style: { color: '#fff' } }}
+        />
+
         <View style={styles.searchbarStyle}>
           <SearchBar
             placeholder="Search For Clubs"
-            value = {this.state.search}
+            value={this.state.search}
             onChangeText={this.updateSearch}
+            style={styles.search}
           />
         </View>
         <SafeAreaView style={styles.container}>
@@ -112,5 +122,10 @@ const styles = StyleSheet.create({
   },
   website: {
     color: 'blue',
+  },
+  search: {
+    marginTop: 10,
+  },
+  buttonStyle: {
   },
 });

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {
   SafeAreaView,
   View,
@@ -8,6 +9,7 @@ import {
   ScrollView,
   Button,
 } from 'react-native';
+
 import { Card, SearchBar, Header } from 'react-native-elements';
 const DATA = [
   {

@@ -1,0 +1,7 @@
+#Tue May 05 18:58:56 EDT 2020
+base.0=C\:\\Users\\Aum\\Documents\\GitHub\\ClubSwipe\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
+path.1=classes.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=C\:\\Users\\Aum\\Documents\\GitHub\\ClubSwipe\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
